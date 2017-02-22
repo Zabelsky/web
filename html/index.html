@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <script src="../js/index.js"></script>
     <script src="../plugins/bootstrap.min.js"></script>
     <script src="../plugins/angular.min.js"></script>
+    <script src="../controllers/app.js"></script>
+    <script src="../controllers/index/index.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <title>Main</title>
 </head>
-<body>
+<body ng-controller="indexController">
 <div class="row">
-    <div class="col-sm-4"> </div>
+    <div class="col-sm-4">  </div>
     <div class="col-sm-4">
         <input class="form-control" type="text" placeholder="Сколько Вам лет?" id="year" />
     </div>
