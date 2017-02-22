@@ -1,69 +1,132 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" ng-app="myApp">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+
+    <!--&lt;!&ndash; plugins &ndash;&gt;-->
+
+    <!--<script src="../plugins/jquery-3.1.1.min.js" type="text/javascript"></script>-->
+    <!--<script src="../plugins/bootstrap.min.js" type="text/javascript"></script>-->
+    <!--<script src="../plugins/angular.min.js" type="text/javascript"></script>-->
+
+    <!--&lt;!&ndash; plugins &ndash;&gt;-->
+
+    <!--&lt;!&ndash; controller &ndash;&gt;-->
+    <!--<script src="../controllers/app.js"></script>-->
+    <!--<script src="../controllers/index/indexController.js"></script>-->
+    <!--<script src="../controllers/index/signUpController.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>-->
+    <!--&lt;!&ndash; controller &ndash;&gt;-->
+
+    <!--&lt;!&ndash; style &ndash;&gt;-->
+
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/style.css">-->
+    <!--&lt;!&ndash; style &ndash;&gt;-->
+
+    <!--<title>Main</title>-->
+<!--</head>-->
+<!--<body >-->
+    <!--<nav class="navbar navbar-inverse">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="navbar-header">-->
+                <!--<a class="navbar-brand" href="#">Zabelsky</a>-->
+            <!--</div>-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">Home</a></li>-->
+                <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Page 1-1</a></li>-->
+                        <!--<li><a href="#">Page 1-2</a></li>-->
+                        <!--<li><a href="#">Page 1-3</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a href="#">Page 2</a></li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#/index"><span class="glyphicon glyphicon-user"></span> Sing in</a></li>-->
+                <!--<li><a href="#/tablets"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</nav>-->
+<!--&lt;!&ndash;<div ng-controller="indexController">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="col-sm-3 form-group" ></div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="col-sm-6" >&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div ng-repeat="button in modes">&ndash;&gt;-->
+                <!--&lt;!&ndash;<label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="radio" ng-model="data.mode" value="{{button.value}}" name="modes" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;{{button.label}}&ndash;&gt;-->
+                <!--&lt;!&ndash;</label>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div ng-include="setFile()"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="col-sm-3 form-group">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div ng-view></div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div ng-view></div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-
-    <!-- plugins -->
-
-    <script src="../plugins/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="../plugins/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../plugins/angular.min.js" type="text/javascript"></script>
-
-    <!-- plugins -->
-
-    <!-- controller -->
-    <script src="../controllers/app.js"></script>
-    <script src="../controllers/index/indexController.js"></script>
-    <!-- controller -->
-
-    <!-- style -->
-
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <!-- style -->
-
-    <title>Main</title>
+    <title>Angular JS Views</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Zabelsky</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Page 2</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
-    </nav>
-<div ng-controller="indexController">
-    <div class="col-sm-3 form-group" ></div>
-    <div class="col-sm-6" >
-        <div class="form-group">
-            <div ng-repeat="button in modes">
-                <label>
-                    <input type="radio" ng-model="data.mode" value="{{button.value}}" name="modes" />
-                    {{button.label}}
-                </label>
-            </div>
-            <div ng-include="setFile()"></div>
-        </div>
-    </div>
-    <div class="col-sm-3 form-group"></div>
+<h2>AngularJS Sample Application</h2>
+<div ng-app = "mainApp">
+    <p><a href = "#addStudent">Add Student</a></p>
+    <p><a href = "#viewStudents">View Students</a></p>
+    <div ng-view></div>
+
+    <script type = "text/ng-template" id = "addStudent.htm">
+        <h2> Add Student </h2>
+        {{message}}
+    </script>
+
+    <script type = "text/ng-template" id = "viewStudents.htm">
+        <h2> View Students </h2>
+        {{message}}
+    </script>
 </div>
 
+<script>
+    var mainApp = angular.module("mainApp", ['ngRoute']);
+    mainApp.config(['$routeProvider', function($routeProvider) {
+        $routeProvider.
+
+        when('/addStudent', {
+            templateUrl: 'addStudent.htm',
+            controller: 'AddStudentController'
+        }).
+
+        when('/viewStudents', {
+            templateUrl: 'viewStudents.htm',
+            controller: 'ViewStudentsController'
+        }).
+
+        otherwise({
+            redirectTo: '/addStudent'
+        });
+    }]);
+
+    mainApp.controller('AddStudentController', function($scope) {
+        $scope.message = "This page will be used to display add student form";
+    });
+
+    mainApp.controller('ViewStudentsController', function($scope) {
+        $scope.message = "This page will be used to display all the students";
+    });
+
+</script>
 
 </body>
 </html>
