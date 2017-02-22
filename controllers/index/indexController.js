@@ -1,5 +1,4 @@
 myApp.controller("indexController", function ($scope) {
-    $scope.hello = "Привет";
 
     $scope.tablets = [{
         name: 'Samsung Galaxy Tab S4',
@@ -16,21 +15,6 @@ myApp.controller("indexController", function ($scope) {
         year: 2014,
         price: 220,
         company: 'Lenovo'
-    }];
-    $scope.data = {};
-
-    $scope.setFile = function () {
-        if($scope.data.mode=='Tablets')
-            return '../view/index/tablets.html';
-        else if($scope.data.mode=='Phones')
-            return '../view/index/phones.html';
-    }
-    $scope.modes = [{
-        value: 'Tablets',
-        label: 'Планшеты'
-    },{
-        value: 'Phones',
-        label: 'Смартфоны'
     }];
 
     $scope.phones = [{
@@ -50,7 +34,20 @@ myApp.controller("indexController", function ($scope) {
         company: 'Xiaomi'
     }];
 
-    $( document ).ready(function() {
-        console.log( "ready!" );
-    });
+    $scope.data = {};
+
+    $scope.setFile = function () {
+        if($scope.data.mode=='Tablets')
+            return '../view/index/tablets.html';
+        else if($scope.data.mode=='Phones')
+            return '../view/index/phones.html';
+    }
+    $scope.modes = [{
+        value: 'Tablets',
+        label: 'Планшеты'
+    },{
+        value: 'Phones',
+        label: 'Смартфоны'
+    }];
+
 });
