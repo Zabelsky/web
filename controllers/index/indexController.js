@@ -21,9 +21,9 @@ myApp.controller("indexController", function ($scope) {
 
     $scope.setFile = function () {
         if($scope.data.mode=='Tablets')
-            return 'tablets.html';
+            return '../view/index/tablets.html';
         else if($scope.data.mode=='Phones')
-            return 'phones.html';
+            return '../view/index/phones.html';
     }
     $scope.modes = [{
         value: 'Tablets',
@@ -49,4 +49,8 @@ myApp.controller("indexController", function ($scope) {
         price: 300,
         company: 'Xiaomi'
     }];
+
+    $( document ).ready(function() {
+        console.log( "ready!" );
+    });
 });
