@@ -83,7 +83,7 @@
 
 <body>
 <h2>AngularJS Sample Application</h2>
-<div ng-app = "mainApp">
+<div ng-app = "myApp">
     <p><a href = "#addStudent">Add Student</a></p>
     <p><a href = "#viewStudents">View Students</a></p>
     <div ng-view></div>
@@ -98,36 +98,6 @@
         {{message}}
     </script>
 </div>
-
-<script>
-    var mainApp = angular.module("mainApp", ['ngRoute']);
-    mainApp.config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-
-        when('/addStudent', {
-            templateUrl: 'addStudent.htm',
-            controller: 'AddStudentController'
-        }).
-
-        when('/viewStudents', {
-            templateUrl: 'viewStudents.htm',
-            controller: 'ViewStudentsController'
-        }).
-
-        otherwise({
-            redirectTo: '/addStudent'
-        });
-    }]);
-
-    mainApp.controller('AddStudentController', function($scope) {
-        $scope.message = "This page will be used to display add student form";
-    });
-
-    mainApp.controller('ViewStudentsController', function($scope) {
-        $scope.message = "This page will be used to display all the students";
-    });
-
-</script>
 
 </body>
 </html>

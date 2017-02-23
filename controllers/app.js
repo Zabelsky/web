@@ -1,5 +1,5 @@
 var myApp = angular.module("myApp", ['ngRoute']);
-mainApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
 
     when('/addStudent', {
@@ -16,3 +16,11 @@ mainApp.config(['$routeProvider', function($routeProvider) {
         redirectTo: '/addStudent'
     });
 }]);
+
+myApp.controller('AddStudentController', function($scope) {
+    $scope.message = "This page will be used to display add student form";
+});
+
+myApp.controller('ViewStudentsController', function($scope) {
+    $scope.message = "This page will be used to display all the students";
+});
